@@ -1,0 +1,1 @@
+global.doorOpen = false;

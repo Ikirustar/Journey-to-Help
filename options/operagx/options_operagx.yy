@@ -1,0 +1,18 @@
+{
+  "option_operagx_version": "0.0.0.1",
+  "option_operagx_next_version": "0.0.0.2",
+  "option_operagx_game_name": "Journey To Help",
+  "option_operagx_interpolate_pixels": true,
+  "option_operagx_scale": 0,
+  "option_operagx_texture_page": "2048x2048",
+  "option_operagx_display_cursor": true,
+  "option_operagx_guid": "3373b52e-c351-4d40-99f5-12a3883f9834",
+  "option_operagx_team_name": "(0b6850d1-1bc7-440b-9b78-7016741415fa) studio",
+  "option_operagx_editUrl": "https://create.gx.games/game/3373b52e-c351-4d40-99f5-12a3883f9834/edit",
+  "option_operagx_internalShareUrl": "",
+  "option_operagx_publicShareUrl": "",
+  "resourceVersion": "1.0",
+  "name": "operagx",
+  "tags": [],
+  "resourceType": "GMOperaGXOptions",
+}

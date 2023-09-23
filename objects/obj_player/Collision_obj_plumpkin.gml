@@ -1,0 +1,2 @@
+global.death = true;
+
