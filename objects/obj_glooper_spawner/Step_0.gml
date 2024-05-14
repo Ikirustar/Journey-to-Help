@@ -6,5 +6,5 @@ if enemy_respawn{
 } 
 
 else if global.death and enemy_death{
-	alarm[0] = 80;
+	alarm[0] = 2;
 }
