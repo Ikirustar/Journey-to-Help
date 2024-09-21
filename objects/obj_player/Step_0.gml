@@ -19,6 +19,7 @@ vertical_direction = arrow_up;
 //jump
 if place_meeting(x,y+1,obj_collision) and arrow_up_jump{
 	vsp -= 9.3;	
+	audio_play_sound(sn_jump, 0, false)
 }
 
 //Horizontal collision
@@ -66,7 +67,8 @@ else if image_xscale = -1{
 }
 
 if space_bar{
-	instance_create_layer(x,y,"Instances",obj_bullet);	
+	instance_create_layer(x,y,"Instances",obj_bullet);
+	audio_play_sound(sn_shoot, 0, false)
 }
 
 if !place_meeting(x,y,obj_ladder){
@@ -79,6 +81,7 @@ if !on_ladder{
 
 //Death check
 if global.death{
+	audio_play_sound(sn_death, 0, false)
 	instance_change(obj_player_death,0);
 	alarm[0] = 40;
 }

@@ -9,6 +9,6 @@ if global.checkpoint_enabled{
 	y = global.check_point_y;
 }
 else {
-	room_restart();
+	room_restart()
 }
 

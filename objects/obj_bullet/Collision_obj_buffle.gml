@@ -1,6 +1,7 @@
 with (other){
 	hp --;	
 	flash = 4;
+	audio_play_sound(sn_enemy_hit, 0, false);
 }
 instance_destroy();
 repeat(5){
