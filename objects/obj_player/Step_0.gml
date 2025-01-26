@@ -71,12 +71,55 @@ if space_bar{
 	audio_play_sound(sn_shoot, 0, false)
 }
 
-if !place_meeting(x,y,obj_ladder){
-	on_ladder = false;	
-} 
+if place_meeting(x,y+5,obj_ladder){
+	
+	if instance_place(x, y, obj_ladder) != noone{
+		var ladder = instance_place(x, y, obj_ladder)
+		
+		vsp = 0;
+		grv = 0;
+		image_speed = 0
+		on_ladder = true
+		
+		if arrow_up {
+			y -= 4;	
+			x = ladder.x +16
+			hsp = 0
+			image_speed = 1
+			sprite_index = spr_player_climb 
+			
+		} else if arrow_down {
+			y += 4;	
+			x = ladder.x +16
+			hsp = 0
+			sprite_index = spr_player_climb
+			image_speed = 1
+			
+			// Check for ground collision
+		    if place_meeting(x, y + 1, obj_collision) {
+		        on_ladder = false;
+		        sprite_index = spr_player;
+		        y -= 4; // Adjust the y position to align with the ground
+		    } 
+		} else if arrow_left or arrow_right {
+			sprite_index = spr_player_jump
+			image_index = 0
+		} 
+	} else {
+		sprite_index = spr_player
+		if arrow_down {
+			sprite_index = spr_player_climb
+			image_speed = 1
+			y += 50
+		}	
+	}
+	
+} else {
+	on_ladder = false
+}
 
-if !on_ladder{
-	grv = 0.4;	
+if !on_ladder {
+	grv = 0.4;
 }
 
 //Death check

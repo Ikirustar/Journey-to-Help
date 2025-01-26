@@ -9,6 +9,10 @@ if global.checkpoint_enabled{
 	y = global.check_point_y;
 }
 else {
-	room_restart()
+	hsp = 0;
+	vsp = 3;
+	image_alpha = 1;
+	x = global.spawn_point_x;
+	y = global.spawn_point_y;
 }
 
